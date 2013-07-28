@@ -1,0 +1,9 @@
+/* Add any valid CSS declarations */
+.field-label {
+  margin-top: 0px;
+}
+
+.pane-user-mail .pane-title h2 {
+  display: inline;
+  font-size: 62.5%;
+}

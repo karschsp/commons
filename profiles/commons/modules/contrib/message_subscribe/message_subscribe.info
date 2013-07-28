@@ -1,0 +1,20 @@
+name = Message subscribe
+description = Subscribe API for the Message and Message notify modules.
+core = 7.x
+package = Message
+php = 5.2.4
+project = message_subscribe
+dependencies[] = ctools
+dependencies[] = flag
+dependencies[] = message
+dependencies[] = message_notify
+
+files[] = message_subscribe.test
+
+
+; Information added by drush on 2013-04-04
+version = "7.x-1.0-alpha3+3-dev"
+core = "7.x"
+project = "message_subscribe"
+datestamp = "1365041463"
+

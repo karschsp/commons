@@ -1,0 +1,122 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Commons install profile.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function commons_install() {
+  // Enable the Origins theme and set it as the default.
+  theme_enable(array('adaptivetheme', 'commons_origins', 'adaptivetheme_admin'));
+  variable_set('theme_default', 'commons_origins');
+  // Set a default administrative theme:
+  variable_set('admin_theme', 'adaptivetheme_admin');
+  variable_set('node_admin_theme', FALSE);
+  commons_set_default_avatar();
+
+  // Place site blocks in the menu_bar and header regions.
+  $menu_block = array(
+    'module' => 'system',
+    'delta' => 'main-menu',
+    'theme' => 'commons_origins',
+    'visibility' => 0,
+    'region' => 'menu_bar',
+    'status' => 1,
+    'pages' => '',
+    'title' => '<none>',
+  );
+  drupal_write_record('block', $menu_block);
+
+  $search_block = array(
+    'module' => 'search',
+    'delta' => 'form',
+    'theme' => 'commons_origins',
+    'visibility' => 0,
+    'region' => 'header',
+    'status' => 1,
+    'pages' => '',
+    'weight' => 2,
+    'title' => '<none>',
+  );
+  drupal_write_record('block', $search_block);
+
+  $utility_links_block = array(
+    'module' => 'commons_utility_links',
+    'delta' => 'utility_links',
+    'theme' => 'commons_origins',
+    'visibility' => 0,
+    'region' => 'header',
+    'status' => 1,
+    'pages' => 0,
+    'weight' => 1,
+    'title' => '<none>',
+  );
+  drupal_write_record('block', $utility_links_block);
+
+  // Create a default role for site administrators, with all available permissions assigned.
+  $admin_role = new stdClass();
+  $admin_role->name = 'administrator';
+  $admin_role->weight = 2;
+  user_role_save($admin_role);
+  // Set this as the administrator role.
+  variable_set('user_admin_role', $admin_role->rid);
+
+  // Assign user 1 the "administrator" role.
+  db_insert('users_roles')
+    ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
+    ->execute();
+
+  // AdaptiveTheme requires that the system theme settings form
+  // be submitted in order for its themes' settings to be properly set
+  // and the resulting css files generated.
+  // For more background, see http://drupal.org/node/1776730.
+  module_load_include('inc', 'system', 'system.admin');
+  foreach (array('adaptivetheme', 'commons_origins') as $theme_name) {
+    $form_state = form_state_defaults();
+    $form_state['build_info']['args'][0] = $theme_name;
+    $form_state['values'] = array();
+    drupal_form_submit('system_theme_settings', $form_state);
+  }
+}
+
+/**
+ * Enable the Origins theme and set it as the default. *
+ */
+function commons_update_3101() {
+  theme_enable(array('adaptivetheme_admin'));
+  variable_set('theme_default', 'commons_origins');
+  variable_set('node_admin_theme', FALSE);
+  return array();
+}
+
+/**
+ * Reset the default avatar if the associated file doesn't exist in the file_managed table.
+ */
+function commons_update_3102() {
+  $reset_avatar = FALSE;
+  $file = variable_get('user_picture_default', '');
+  if(!$file) {
+    $reset_avatar = TRUE;
+  }
+  if(!$reset_avatar) {
+    $results = db_select('file_managed', 'f')
+      ->fields('f', array('fid'))
+      ->condition('filename', $file,'=')
+      ->execute()
+      ->fetchAll();
+    if(count($results) === 0) {
+      $reset_avatar = TRUE;
+    }
+  }
+  if($reset_avatar) {
+    commons_set_default_avatar();
+  }
+  return array();
+}

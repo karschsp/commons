@@ -1,0 +1,15 @@
+name = Message notify test module
+description = Functionality to assist Message notify testing.
+core = 7.x
+dependencies[] = message_notify
+hidden = TRUE
+
+files[] = plugins/notifier/MessageNotifierTest.class.php
+
+
+; Information added by drush on 2013-04-04
+version = "7.x-2.3+3-dev"
+core = "7.x"
+project = "message_notify"
+datestamp = "1365041465"
+
