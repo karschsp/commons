@@ -329,7 +329,7 @@ var {
   white-space: nowrap;
 }
 #header a {
-  color: white;
+  /* color: white;*/
 }
 
 .header-color-row-one {
@@ -4266,7 +4266,7 @@ body.front.logged-in .view-commons-homepage-content .article.node.node-page .lin
   color: #353535;
 }
 .palette-black-blue-yellow .header-color-row-one {
-  background-color: #353535;
+  background-color: #fff;
   border-top: 4px solid black;
 }
 .boxshadow .palette-black-blue-yellow .header-color-row-one {
