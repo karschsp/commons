@@ -1641,7 +1641,7 @@ a:hover, a:focus {
   padding: 31px 13px 0px 13px;
   height: 33px;
   text-transform: uppercase;
-  text-shadow: black 1px 1px 4px;
+  text-shadow: #eee 1px 1px 4px;
   background-position: center 10px;
   background-repeat: no-repeat;
   position: relative;
@@ -1662,16 +1662,16 @@ a:hover, a:focus {
 }
 
 .main-menu-home a {
-  background: url('../images/icons/icon-home.png?1363371593') no-repeat center 10px;
-  background-color: red;
+  /* background: url('../images/icons/icon-home.png?1363371593') no-repeat center 10px; */
+
 }
 
 .main-menu-groups a {
-  background: url('../images/icons/icon-groups.png?1363371593') no-repeat center 10px;
+  /* background: url('../images/icons/icon-groups.png?1363371593') no-repeat center 10px; */
 }
 
 .main-menu-events a {
-  background: url('../images/icons/icon-events.png?1363371593') no-repeat center 10px;
+  /* background: url('../images/icons/icon-events.png?1363371593') no-repeat center 10px; */
 }
 
 #menu-bar.nav ul.menu li.main-menu-search {

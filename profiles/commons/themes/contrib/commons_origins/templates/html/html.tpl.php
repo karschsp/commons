@@ -63,6 +63,7 @@
 <?php print $styles; ?>
 <?php print $scripts; ?>
 <?php print $polyfills; ?>
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
 <body class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <div id="skip-link">
