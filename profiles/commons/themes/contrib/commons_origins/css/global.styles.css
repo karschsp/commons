@@ -289,7 +289,7 @@ h2 {
 }
 
 h3 {
-  color: #2783b9;
+  color: #04224d;
   font-weight: normal;
   font-size: 20px;
   line-height: 20px;
@@ -345,7 +345,7 @@ var {
 }
 
 .header-color-row-two {
-  background-color: #2783b9;
+  background-color: #04224d;
   height: 26px;
   border-top: 1px solid #3d9dd6;
   border-bottom: 1px solid #1e658f;
@@ -764,7 +764,7 @@ ul.primary.tabs li a {
 .quicktabs-style-commons-pills ul.quicktabs-tabs li a span,
 ul.primary.tabs li a,
 ul.primary.tabs li a span {
-  color: #2783b9;
+  color: #04224d;
 }
 .quicktabs-style-commons-pills ul.quicktabs-tabs li a:hover,
 ul.primary.tabs li a:hover {
@@ -1569,7 +1569,7 @@ h1.node-title a:hover {
  * ========================================================================== */
 a {
   text-decoration: none;
-  color: #2783b9;
+  color: #04224d;
 }
 a:hover, a:focus {
   text-decoration: underline;
@@ -1633,7 +1633,7 @@ a:hover, a:focus {
   height: 0px;
   border-style: solid;
   border-width: 0 6px 6px 6px;
-  border-color: transparent transparent #2783b9 transparent;
+  border-color: transparent transparent #04224d transparent;
 }
 #menu-bar.nav ul.menu li a {
   display: block;
@@ -1663,6 +1663,7 @@ a:hover, a:focus {
 
 .main-menu-home a {
   background: url('../images/icons/icon-home.png?1363371593') no-repeat center 10px;
+  background-color: red;
 }
 
 .main-menu-groups a {
@@ -1706,7 +1707,7 @@ ul.commons-utility-links li {
   font-weight: bold;
 }
 ul.commons-utility-links li.last {
-  border-left: 1px solid #2783b9;
+  border-left: 1px solid #04224d;
   margin-left: 9px;
 }
 ul.commons-utility-links li.last a {
@@ -3424,7 +3425,7 @@ body.front.logged-in .view-commons-homepage-content .article.node.node-page .lin
   text-decoration: none;
 }
 .page-events div.search-result-wrapper h3.title a {
-  color: #2783b9;
+  color: #04224d;
 }
 @media only screen and (max-width: 768px) {
   .page-events .three-25-50-25 > .filters-processed {
@@ -4276,18 +4277,18 @@ body.front.logged-in .view-commons-homepage-content .article.node.node-page .lin
   margin-top: 1px;
 }
 .palette-black-blue-yellow .header-color-row-two {
-  background-color: #0072ab;
+  background-color: #04224d;
   border-top: 1px solid #0094de;
   border-bottom: 1px solid #005078;
 }
 .palette-black-blue-yellow h1.node-title {
-  color: #0072ab;
+  color: #04224d;
 }
 .palette-black-blue-yellow h1.node-title a {
-  color: #0072ab;
+  color: #04224d;
 }
 .palette-black-blue-yellow a, .palette-black-blue-yellow .commons-bw-create-all-widget-types li a {
-  color: #0072ab;
+  color: #04224d;
 }
 .palette-black-blue-yellow #menu-bar.nav ul.menu li:hover .arrow:before,
 .palette-black-blue-yellow #menu-bar.nav ul.menu li.active-trail .arrow:before {
@@ -4295,16 +4296,16 @@ body.front.logged-in .view-commons-homepage-content .article.node.node-page .lin
 }
 .palette-black-blue-yellow #menu-bar.nav ul.menu li:hover .arrow:after,
 .palette-black-blue-yellow #menu-bar.nav ul.menu li.active-trail .arrow:after {
-  border-color: transparent transparent #0072ab transparent;
+  border-color: transparent transparent #04224d transparent;
 }
 .palette-black-blue-yellow ul.commons-utility-links li.last {
-  border-left-color: #0072ab;
+  border-left-color: #04224d;
 }
 .palette-black-blue-yellow .quicktabs-style-commons-pills ul.quicktabs-tabs li a,
 .palette-black-blue-yellow .quicktabs-style-commons-pills ul.quicktabs-tabs li a span,
 .palette-black-blue-yellow ul.primary.tabs li a,
 .palette-black-blue-yellow ul.primary.tabs li a span {
-  color: #0072ab;
+  color: #04224d;
 }
 .palette-black-blue-yellow .quicktabs-style-commons-pills ul.quicktabs-tabs li a:hover,
 .palette-black-blue-yellow ul.primary.tabs li a:hover {
@@ -4327,10 +4328,10 @@ body.front.logged-in .view-commons-homepage-content .article.node.node-page .lin
   background-image: linear-gradient(top, #00496e 0%, #005e8c 100%);
 }
 .palette-black-blue-yellow .commons-bw-create-all-widget-types, .palette-black-blue-yellow li.sharethis .sharethis-wrapper {
-  border-color: #0072ab;
+  border-color: #04224d;
 }
 .palette-black-blue-yellow li.sharethis .sharethis-wrapper:before {
-  border-color: #0072ab transparent transparent transparent;
+  border-color: #04224d transparent transparent transparent;
 }
 .palette-black-blue-yellow #menu-bar.nav ul.menu li a, #menu-bar.nav ul.menu li .palette-black-blue-yellow a {
   border-left: 1px solid #444444;
@@ -4358,7 +4359,7 @@ body.front.logged-in .view-commons-homepage-content .article.node.node-page .lin
   color: white;
 }
 .palette-black-blue-yellow .selectBox-dropdown {
-  color: #0072ab;
+  color: #04224d;
 }
 
 .palette-brick-brick h2 {
