@@ -1,12 +1,14 @@
 name = Vertex Commons Views
 core = 7.x
 package = Vertex Commons
+php = 5.2.4
 dependencies[] = features
 dependencies[] = menu
 dependencies[] = views
+dependencies[] = views_content
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:1
-features[menu_custom][] = main-menu
-features[menu_links][] = main-menu:people
+features[views_view][] = featured_documents
 features[views_view][] = people
+features[views_view][] = quick_links
 features_exclude[dependencies][ctools] = ctools
