@@ -183,13 +183,25 @@ function commons_search_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'custom_search_node_types';
   $strongarm->value = array(
+    'answer' => 0,
+    'migrate_example_beer' => 0,
     'document' => 0,
     'event' => 0,
     'group' => 0,
-    'notice' => 0,
+    'key_focus_area_team' => 0,
+    'migrate_example_pathauto' => 0,
     'page' => 0,
+    'poll' => 0,
     'post' => 0,
+    'project' => 0,
+    'question' => 0,
+    'strategy_team' => 0,
+    'team' => 0,
     'wiki' => 0,
+    'migrate_example_wine' => 0,
+    'migrate_example_producer' => 0,
+    'work_center_leadership_team' => 0,
+    'migrate_example_baseball' => 0,
   );
   $export['custom_search_node_types'] = $strongarm;
 
@@ -198,13 +210,25 @@ function commons_search_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'custom_search_node_types_excluded';
   $strongarm->value = array(
+    'answer' => 0,
+    'migrate_example_beer' => 0,
     'document' => 0,
     'event' => 0,
     'group' => 0,
-    'notice' => 0,
+    'key_focus_area_team' => 0,
+    'migrate_example_pathauto' => 0,
     'page' => 0,
+    'poll' => 0,
     'post' => 0,
+    'project' => 0,
+    'question' => 0,
+    'strategy_team' => 0,
+    'team' => 0,
     'wiki' => 0,
+    'migrate_example_wine' => 0,
+    'migrate_example_producer' => 0,
+    'work_center_leadership_team' => 0,
+    'migrate_example_baseball' => 0,
   );
   $export['custom_search_node_types_excluded'] = $strongarm;
 
@@ -339,14 +363,14 @@ function commons_search_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'custom_search_type_selector_label';
-  $strongarm->value = 'Search for';
+  $strongarm->value = 'Search';
   $export['custom_search_type_selector_label'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'custom_search_type_selector_label_visibility';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['custom_search_type_selector_label_visibility'] = $strongarm;
 
   return $export;

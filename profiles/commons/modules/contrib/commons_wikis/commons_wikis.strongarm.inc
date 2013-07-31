@@ -131,11 +131,23 @@ function commons_wikis_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
           'weight' => '0',
+        ),
+        'metatags' => array(
+          'weight' => '9',
+        ),
+        'path' => array(
+          'weight' => '7',
+        ),
+        'redirect' => array(
+          'weight' => '8',
         ),
       ),
       'display' => array(),

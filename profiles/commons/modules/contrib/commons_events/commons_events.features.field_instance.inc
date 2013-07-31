@@ -89,7 +89,7 @@ function commons_events_field_default_field_instances() {
         'module' => 'addressfield',
         'settings' => array(
           'format_handlers' => array(
-            0 => 'address'
+            0 => 'address',
           ),
           'use_widget_handlers' => 1,
         ),
@@ -147,6 +147,9 @@ function commons_events_field_default_field_instances() {
         'settings' => array(
           'format_type' => 'event_datetime',
           'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
         ),
         'type' => 'date_default',
         'weight' => '1',
@@ -239,6 +242,7 @@ function commons_events_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
+          'image_link' => '',
           'image_style' => '50x50',
         ),
         'type' => 'image',
@@ -552,6 +556,7 @@ function commons_events_field_default_field_instances() {
   t('Organizers');
   t('Registration');
   t('Registration type');
+  t('Topics');
   t('URL');
 
   return $field_instances;

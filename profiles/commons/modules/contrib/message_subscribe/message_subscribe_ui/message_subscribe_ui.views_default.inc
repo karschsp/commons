@@ -98,18 +98,6 @@ function message_subscribe_ui_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  $translatables['subscribe_node'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('You are not subscribed to any item.'),
-    t('flag'),
-    t('All'),
-  );
   $export['subscribe_node'] = $view;
 
   $view = new view();
@@ -183,18 +171,6 @@ function message_subscribe_ui_views_default_views() {
   $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
-  $translatables['subscribe_taxonomy_term'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('You are not subscribed to any item.'),
-    t('flag'),
-    t('All'),
-  );
   $export['subscribe_taxonomy_term'] = $view;
 
   $view = new view();
@@ -280,18 +256,6 @@ function message_subscribe_ui_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  $translatables['subscribe_user'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('You are not subscribed to any item.'),
-    t('flag'),
-    t('All'),
-  );
   $export['subscribe_user'] = $view;
 
   return $export;

@@ -58,7 +58,7 @@ function commons_profile_social_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => '6',
+      'weight' => '18',
     ),
   );
 
@@ -109,7 +109,7 @@ function commons_profile_social_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => '7',
+      'weight' => '19',
     ),
   );
 
@@ -161,7 +161,7 @@ function commons_profile_social_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => '8',
+      'weight' => '20',
     ),
   );
 

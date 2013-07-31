@@ -16,7 +16,7 @@ function commons_follow_term_views_api() {
  */
 function commons_follow_term_flag_default_flags() {
   $flags = array();
-  // Exported flag: "Topics you follow".
+  // Exported flag: "Topics".
   $flags['commons_follow_term'] = array(
     'content_type' => 'taxonomy_term',
     'title' => 'Topics',
@@ -77,10 +77,10 @@ function commons_follow_term_flag_default_flags() {
     'show_on_form' => 0,
     'access_author' => '',
     'module' => 'commons_follow_term',
-    'api_version' => 2,
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 2,
   );
   return $flags;
 

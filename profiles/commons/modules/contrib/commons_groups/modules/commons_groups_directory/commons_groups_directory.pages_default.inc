@@ -16,7 +16,10 @@ function commons_groups_directory_default_page_manager_pages() {
   $page->admin_title = 'Groups Directory';
   $page->admin_description = 'A directory of groups.';
   $page->path = 'groups';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'normal',
     'title' => 'Groups',

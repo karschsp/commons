@@ -3,6 +3,7 @@ description = Provides a homepage for the site for anonymous and authenticated u
 core = 7.x
 package = Commons - Landing pages
 php = 5.2.4
+version = 7.x-3.0
 project = commons_site_homepage
 dependencies[] = commons_activity_streams
 dependencies[] = commons_events
@@ -14,7 +15,7 @@ dependencies[] = page_manager
 dependencies[] = strongarm
 dependencies[] = views
 dependencies[] = views_litepager
-datestamp = 1354747296
+datestamp = 1361820352
 features[ctools][] = page_manager:pages_default:1
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
@@ -23,10 +24,3 @@ features[page_manager_pages][] = commons_home
 features[variable][] = site_frontpage
 features[views_view][] = commons_homepage_content
 features_exclude[dependencies][views_content] = views_content
-
-; Information added by drupal.org packaging script on 2013-02-25
-version = "7.x-3.0"
-core = "7.x"
-project = "commons_site_homepage"
-datestamp = "1361820352"
-

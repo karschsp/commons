@@ -351,8 +351,8 @@ function commons_site_homepage_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'admin_title' => 'Anonymous homepage welcome text',
-      'title' => variable_get('commons_anonymous_welcome_title', 'The open-source alternative for enterprise-scale business software'),
-      'body' => variable_get('commons_anonymous_welcome_body', 'Enable social networking to create productive interactions. Whether your community is public or private, Commons does it!'),
+      'title' => 'Welcome to our community',
+      'body' => 'Share your thoughts, find answers to your questions.',
       'format' => 'filtered_html',
       'substitute' => TRUE,
     );

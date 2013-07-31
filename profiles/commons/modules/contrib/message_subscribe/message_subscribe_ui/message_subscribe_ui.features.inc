@@ -8,5 +8,5 @@
  * Implements hook_views_api().
  */
 function message_subscribe_ui_views_api() {
-  return array("version" => "3.0");
+  return array("api" => "3.0");
 }

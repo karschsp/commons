@@ -1,12 +1,16 @@
 name = Commons Pages
 core = 7.x
 package = Commons - Content types
+php = 5.2.4
+version = 7.x-3.0
+project = commons_pages
 dependencies[] = commons_body
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = node
 dependencies[] = strongarm
 dependencies[] = text
+datestamp = 1361820339
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1
 features[field_instance][] = node-page-body
@@ -24,9 +28,3 @@ features[variable][] = node_options_page
 features[variable][] = node_preview_page
 features[variable][] = node_submitted_page
 features[variable][] = pathauto_node_page_pattern
-; Information added by drupal.org packaging script on 2013-02-25
-version = "7.x-3.0"
-core = "7.x"
-project = "commons_pages"
-datestamp = "1361820339"
-

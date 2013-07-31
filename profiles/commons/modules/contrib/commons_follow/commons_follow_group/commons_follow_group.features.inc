@@ -88,10 +88,10 @@ function commons_follow_group_flag_default_flags() {
     'show_contextual_link' => FALSE,
     'i18n' => 0,
     'module' => 'commons_follow_group',
-    'api_version' => 2,
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 2,
   );
   return $flags;
 

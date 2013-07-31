@@ -40,7 +40,7 @@ function commons_profile_base_field_default_field_instances() {
         'rows' => '5',
       ),
       'type' => 'text_textarea',
-      'weight' => '5',
+      'weight' => '14',
     ),
   );
 

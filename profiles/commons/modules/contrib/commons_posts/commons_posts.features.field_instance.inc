@@ -22,7 +22,7 @@ function commons_posts_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => '2',
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -50,7 +50,91 @@ function commons_posts_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => '2',
+      'weight' => '1',
+    ),
+  );
+
+  // Exported field_instance: 'node-post-field_display_in_featured_docume'
+  $field_instances['node-post-field_display_in_featured_docume'] = array(
+    'bundle' => 'post',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => '0',
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => '13',
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_display_in_featured_docume',
+    'label' => 'Display in featured documents?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => '4',
+    ),
+  );
+
+  // Exported field_instance: 'node-post-field_display_in_quick_links'
+  $field_instances['node-post-field_display_in_quick_links'] = array(
+    'bundle' => 'post',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => '0',
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => '12',
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_display_in_quick_links',
+    'label' => 'Display in quick links?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => '3',
     ),
   );
 
@@ -62,11 +146,11 @@ function commons_posts_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 4,
+        'weight' => '4',
       ),
       'teaser' => array(
         'label' => 'above',
@@ -97,6 +181,8 @@ function commons_posts_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
+  t('Display in featured documents?');
+  t('Display in quick links?');
   t('Topics');
 
   return $field_instances;

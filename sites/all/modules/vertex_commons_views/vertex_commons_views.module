@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Vertex Commons Views feature.
+ */
+
+include_once 'vertex_commons_views.features.inc';

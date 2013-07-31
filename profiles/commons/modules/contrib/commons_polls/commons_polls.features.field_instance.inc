@@ -94,13 +94,9 @@ function commons_polls_field_default_field_instances() {
     ),
   );
 
-
-
   // Translatables
   // Included for use with string extractors like potx.
-  t('Audience');
   t('Body');
-  t('Group content visibility');
   t('Topics');
 
   return $field_instances;
