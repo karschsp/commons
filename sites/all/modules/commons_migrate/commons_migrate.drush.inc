@@ -30,6 +30,9 @@ function commons_migrate_drush_command() {
   $items['commons-migrate-pictures'] = array(
     'description' => 'Migrate employee pictures',
   );
+  $items['commons-migrate-skills'] = array(
+    'description' => 'Migrate Skills Taxonomy',
+  );
   return $items;
 }
 
@@ -116,5 +119,53 @@ function drush_commons_migrate_pictures() {
       $user->field_photo = array(LANGUAGE_NONE => array('0' => (array)$file));
       user_save($user);
     }
+  }
+}
+
+function drush_commons_migrate_skills() {
+  // Hard-coding this for now.  Should really load the vocab by name.
+  $vid = 2;
+  $bus_skills_id = 20;
+  $tech_skills_id = 19;
+  $db = mssql_connect('mssqlit80:10000', 'people', 'people');
+  $people = mssql_select_db('people');
+
+  $query = "SELECT SkillParentGroupID, SkillGroupName FROM SkillGroup";
+  $result = mssql_query($query);
+  while ($row = mssql_fetch_array($result)) {
+    if ($row['SkillParentGroupID'] == 1) {
+      $parent_id = $tech_skills_id;
+    } else {
+      $parent_id = $bus_skills_id;
+    }
+    $term = new stdClass();
+    $term->vid = $vid;
+    $term->name = $row['SkillGroupName'];
+    $term->parent = $parent_id;
+    taxonomy_term_save($term);
+    // $parent_term = $term->name;
+    print('Saved term ' . $term->name . "\n");
+  }
+
+  $query = "SELECT SkillGroupName, SkillName FROM Skill S JOIN SkillGroup SG ON SG.SkillGroupID=S.SkillGroupID";
+  $result = mssql_query($query);
+  while ($row = mssql_fetch_array($result)) {
+    print $parent_term . "\n";
+    $query = db_select('taxonomy_term_data', 't');
+    $query->condition('t.name', $row['SkillGroupName'], '=');
+    $query->fields('t', array('tid'));
+    $res = $query->execute();
+    foreach ($res as $record) {
+      // print_r($record);
+      // print($record->tid) . "\n";
+      $pid = $record->tid;
+    }
+    print $pid . "\n";
+    $term = new stdClass();
+    $term->vid = $vid;
+    $term->name = $row['SkillName'];
+    $term->parent = $pid;
+    taxonomy_term_save($term);
+    print('Saved term ' . $term->name . "\n");
   }
 }
