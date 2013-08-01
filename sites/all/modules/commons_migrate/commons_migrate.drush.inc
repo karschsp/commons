@@ -33,6 +33,9 @@ function commons_migrate_drush_command() {
   $items['commons-migrate-skills'] = array(
     'description' => 'Migrate Skills Taxonomy',
   );
+  $items['commons-migrate-skillset'] = array(
+    'description' => 'Migrate Skillsets',
+  );
   return $items;
 }
 
@@ -168,4 +171,29 @@ function drush_commons_migrate_skills() {
     taxonomy_term_save($term);
     print('Saved term ' . $term->name . "\n");
   }
+}
+
+function drush_commons_migrate_skillset() {
+  $db = mssql_connect('mssqlit80:10000', 'people', 'people');
+  $people = mssql_select_db('people');
+  $query = "SELECT P.firstname, P.lastname, P.email, S.SkillName FROM SkillSet SS INNER JOIN Skill S ON S.SkillID = SS.SkillID INNER JOIN person P ON P.PersonID = SS.PersonID WHERE     (P.del IS NULL)";
+  $result = mssql_query($query);
+  while ($row = mssql_fetch_array($result)) {
+    $user = user_load_by_mail($row['email']);
+    $query = db_select('taxonomy_term_data', 't');
+    $query->condition('t.name', $row['SkillName'], '=');
+    $query->fields('t', array('tid'));
+    $res = $query->execute();
+    foreach ($res as $record) {
+      // print_r($record);
+      // print($record->tid) . "\n";
+      $tid = $record->tid;
+    }
+    if (isset($user->uid) && $user->uid > 0 && isset($tid)) {
+      $user->field_skill_and_experience[LANGUAGE_NONE][]['tid'] = $tid;
+      user_save($user);
+      print "Added skill " . $row['SkillName'] . ' to ' . $user->realname . "\n";
+    }
+  }
+
 }
