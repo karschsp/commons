@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Vertex Commons Skills feature.
+ */
+
+include_once 'vertex_commons_skills.features.inc';
