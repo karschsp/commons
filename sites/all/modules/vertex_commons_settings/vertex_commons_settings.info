@@ -1,9 +1,8 @@
 name = vertex_commons_settings
 core = 7.x
 package = Vertex Commons
+php = 5.2.4
 dependencies[] = features
-dependencies[] = menu
 dependencies[] = menu_attributes
 features[features_api][] = api:1
-features[menu_custom][] = main-menu
 features[user_permission][] = administer menu attributes
